@@ -58,7 +58,7 @@ export const config = {
    }
   }
  }
-} satisfies NextAuthOptions
+} as NextAuthOptions
 
 export default NextAuth(config)
 
