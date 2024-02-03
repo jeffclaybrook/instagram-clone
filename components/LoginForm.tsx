@@ -5,18 +5,16 @@ import { signIn } from "next-auth/react"
 import { Button } from "./ui/button"
 import { calSans } from "@/app/fonts"
 
-export default function LoginForm() {
- return (
-  <div className="space-y-3">
-   <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-    <h1 className={`${calSans.className} mb-3 text-2xl dark:text-black`}>Please login to continue</h1>
-    <LoginButton />
-   </div>
+const LoginForm = () =>  (
+ <div className="space-y-3">
+  <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
+   <h1 className={`${calSans.className} mb-3 text-2xl dark:text-black`}>Please login to continue</h1>
+   <LoginButton />
   </div>
- )
-}
+ </div>
+)
 
-function LoginButton() {
+const LoginButton = () => {
  const { pending } = useFormStatus()
 
  return (
@@ -30,3 +28,5 @@ function LoginButton() {
   </Button>
  )
 }
+
+export default LoginForm

@@ -8,7 +8,7 @@ type Props = ButtonProps & {
  children: ReactNode
 }
 
-function SubmitButton({ children, ...props }: Props) {
+const SubmitButton = ({ children, ...props }: Props) => {
  const { pending } = useFormStatus()
 
  return (
