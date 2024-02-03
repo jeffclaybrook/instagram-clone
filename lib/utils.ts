@@ -9,8 +9,10 @@ export function cn(...inputs: ClassValue[]) {
 export const getUserId = async () => {
   const session = await auth()
   const userId = session?.user?.id
+  
   if (!userId) {
     throw new Error("You must be logged in to use this feature")
   }
+
   return userId
 }
