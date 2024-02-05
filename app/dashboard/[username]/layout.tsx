@@ -66,7 +66,7 @@ const ProfileLayout = async ({ children, params: { username } }: Props) => {
           className={buttonVariants({
            className: "!font-bold",
            variant: "secondary",
-           size: "sm",
+           size: "sm"
           })}
          >
           Edit profile
